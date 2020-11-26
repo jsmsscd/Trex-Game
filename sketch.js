@@ -117,7 +117,12 @@ function draw() {
     //set lifetime of the game objects so that they are never destroyed
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
-    
+    if (touches.length > 0) {
+      if (restart.overlapPoint(touches[0].x, touches[0].y)) {
+        reset();
+        touches = []
+      }
+    }
     if(mousePressedOver(restart)) {
       reset();
     }
