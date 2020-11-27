@@ -67,7 +67,7 @@ function setup() {
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
   
-  trex.setCollider("circle",0,0,40);
+  trex.setCollider("rectangle",0,0,400,50);
   
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
