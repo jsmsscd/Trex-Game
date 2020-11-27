@@ -68,6 +68,7 @@ function setup() {
   invisibleGround.visible = false;
   
   trex.setCollider("rectangle",0,0,400,50);
+  trex.debug=true;
   
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
