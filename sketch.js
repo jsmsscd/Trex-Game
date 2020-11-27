@@ -67,6 +67,8 @@ function setup() {
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
   
+  trex.setCollider("circle",0,0,40);
+  
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
   
@@ -98,7 +100,8 @@ function draw() {
     spawnObstacles();
   
     if(obstaclesGroup.isTouching(trex)){
-        gameState = END;
+       trex.velocityY = -12;
+        //gameState = END;
     }
   }
   else if (gameState === END) {
